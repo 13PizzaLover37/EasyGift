@@ -1,0 +1,15 @@
+﻿body {
+}
+
+.loginButtons {
+    border: dashed 2px black;
+    padding: 2px;
+    text-decoration: none;
+}
+
+.loginButtons:hover{
+    color:black;
+    border: solid 3px red;
+    transform: scale(1.1)
+}
+    
