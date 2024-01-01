@@ -9,9 +9,33 @@
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
+        <AuthorizeView Roles="Admin">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="adminpage" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Admin Page
+                </NavLink>
+            </div>
+        </AuthorizeView>
+        <AuthorizeView Roles="Admin, Moderator">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="moderatorpage" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Moderator Page
+                </NavLink>
+            </div>
+        </AuthorizeView>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="partners" Match="NavLinkMatch.All">
+                <span class="oi oi-loop" aria-hidden="true"></span> Partners
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="gifts" Match="NavLinkMatch.All">
+                <span class="oi oi-box" aria-hidden="true"></span> Gifts
             </NavLink>
         </div>
     </nav>
